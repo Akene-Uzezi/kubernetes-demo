@@ -5,7 +5,7 @@ git add .
 read -p "Enter commit message: " COMMIT_MESSAGE
 git commit -m "$COMMIT_MESSAGE"
 read -p "Do you want to push the changes to the remote repository? (y/n) " PUSH_CHANGES
-if [[ "$PUSH_CHANGES" == "y" ]]; then
+if [ "$PUSH_CHANGES" = "y" ]; then
     git push
     echo "Changes pushed to remote repository."
 else
