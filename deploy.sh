@@ -27,4 +27,4 @@ echo "Getting services ..."
 kubectl get services
 
 echo "fetching the main service ..."
-kubectl get service $NAME
+kubectl get service $NAME-service
