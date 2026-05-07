@@ -14,6 +14,12 @@ echo "Applying Kubernetes manifests..."
 kubectl apply -f k8s/deployment.yaml
 kubectl apply -f k8s/service.yaml
 
+echo "Restarting deployment to pull latest image..."
+kubectl rollout restart deployment/$NAME
+
+echo "waiting for rollout to complete..."
+kubectl rollout status deployment/$NAME
+
 echo "Getting pods ..."
 kubectl get pods
 
